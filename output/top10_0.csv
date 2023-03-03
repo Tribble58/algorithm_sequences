@@ -1,0 +1,11 @@
+pattern,pattern_counts
+Algorithm 7,134
+Algorithm 7 -> Algorithm 10 -> Algorithm 15,125
+Algorithm 17,124
+Algorithm 10,87
+Algorithm 7 -> Algorithm 10,62
+Algorithm 7 -> Algorithm 8 -> Algorithm 10 -> Algorithm 15,54
+Algorithm 13,54
+Algorithm 7 -> Algorithm 7,50
+Algorithm 7 -> Algorithm 8 -> Algorithm 10,49
+Algorithm 6 -> Algorithm 7 -> Algorithm 8 -> Algorithm 10,46
