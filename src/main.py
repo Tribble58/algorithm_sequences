@@ -36,6 +36,7 @@ if __name__ == '__main__':
     # Logs can be of various formats, we need to check whether some files were processed with error
     error_paths = []
 
+    print('Log processing has began')
     for log_path in tqdm(log_paths):
 
         # If limit is defined, stop when limit is reached
@@ -53,6 +54,8 @@ if __name__ == '__main__':
                     # Process error logs
                     error_paths.append(log_path)
         count += 1
+    print('=' * 50)
+    print('Log processing has ended')
 
     # Define algorithm and message (Algorithm Started, Algorithm Ended) in a separate column
     df['algo'] = df['info'].apply(lambda x: get_algorithm(x))
@@ -87,5 +90,5 @@ if __name__ == '__main__':
     print(f'Total amount of sessions: {sum(top10.pattern_counts)}')
 
     print('Top-10 most popular algorithm sequences: ')
-    for algo_seq in top10.pattern.iloc[:10].values:
-        print(algo_seq)
+    for algo_seq, number in top10.iloc[:10].values:
+        print(f'Algorithm sequence: {algo_seq}, number of occurrences: {number}')
